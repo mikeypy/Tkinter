@@ -1,6 +1,6 @@
 # Tkinter
 
-*********Simple Expense Calculator****
+*********Simple Expense Calculator**********
 
 It's just a simple Script calculating basic daily or should i say monthly expense. Nothing fancy, just incase you wanna get your feet whet with the GUI tkinter.
 Remember the Zen of Python...... Simple is better than Complex.
