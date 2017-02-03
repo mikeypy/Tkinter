@@ -13,9 +13,11 @@ class App():
 
     def __init__(self, master):
 
-        master.title('Expense Calculator')
-        master.configure(background = '#f4d7c4')
-        master.resizable(False, False)
+        self.master = master
+
+        self.master.title('Expense Calculator')
+        self.master.configure(background = '#f4d7c4')
+        self.master.resizable(False, False)
 
         self.style = ttk.Style()
         self.style.configure('TFrame', background='#f4d7c4')
@@ -23,13 +25,13 @@ class App():
         self.style.configure('TLabel', background='#f4d7c4')
         
 
-        self.frame_header = ttk.Frame(master)
+        self.frame_header = ttk.Frame(self.master)
         self.frame_header.pack()
 
         ttk.Label(self.frame_header, text='Calculate your Expense', style='Header.TLabel').grid(row=0,column=1)
         ttk.Label(self.frame_header, text='Enter the figures below').grid(row=1,column=1)
 
-        self.frame_contents = ttk.Frame(master)
+        self.frame_contents = ttk.Frame(self.master)
         self.frame_contents.pack()
 
         ttk.Label(self.frame_contents, text='Electricity').grid(row=0, column=0, sticky='sw', padx=5)
@@ -55,9 +57,9 @@ class App():
         
     def submit(self):
 
-        self.all = int(self.entry_elec.get()) + int(self.entry_gas.get()) + int(self.entry_rent.get()) + int(self.entry_tax.get())
+        self.all = float(self.entry_elec.get()) + float(self.entry_gas.get()) + float(self.entry_rent.get()) + float(self.entry_tax.get())
         self.clear()
-        messagebox.showinfo(title = 'Expense Calculator', message = 'This is your result : ' + repr (self.all))
+        messagebox.showinfo(title = 'Expense Calculator', message = 'This is your result : ' + str(self.all))
         
 
     def clear(self):
