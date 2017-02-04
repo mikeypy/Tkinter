@@ -1,2 +1,2 @@
 all you need is to make sure python is installed
-you can just run it on IDLE or your preferred IDE
+you can just run it with IDLE(python's own IDE) or your preferred IDE
