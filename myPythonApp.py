@@ -2,12 +2,14 @@
 #myPythonApp.py by Michael Akintuyosi
 #Copyright(c) 2016
 
-""" Tkinter Freestyling"""
+""" Building an Expense Calc with Tkinter"""
 
 
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
+
+__version__ = '0.3.1'
 
 class App():
 
